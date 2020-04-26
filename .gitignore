@@ -95,3 +95,6 @@ ENV/
 
 # Visual code
 .vs
+
+# Audio files
+.au

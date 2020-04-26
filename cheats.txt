@@ -1,0 +1,16 @@
+To remove all installed packages from virtualenv:
+
+pip freeze | xargs pip uninstall -y
+
+To install:
+
+pip install -r requirements.txt
+
+Link for GTZAN repo:
+
+https://www.kaggle.com/carlthome/gtzan-genre-collection/data
+
+
+Library versions:
+
+keras==2.2.0
