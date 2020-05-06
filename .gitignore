@@ -1,2 +1,4 @@
 data/genres
 models/
+custom_cnn_2d.h5
+
