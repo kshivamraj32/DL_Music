@@ -1,10 +1,8 @@
-## gtzan.keras
-
->  Music Genre classification using Convolutional Neural Networks. Implemented in Tensorflow 2.0 using the Keras API
+## Music Genre classification using Deep Learning
 
 ### Overview
 
-*tl;dr*: Compare the classic approach of extract features and use a classifier (e.g SVM) against the Deep Learning approach of using CNNs on a representation of the audio (Melspectrogram) to extract features and classify. You can see both approaches on the **nbs** folder in the Jupyter notebooks. 
+All the approaches are on the **nbs** folder in the Jupyter notebooks. 
 
 Resume of the deep learning approach:
 
@@ -12,28 +10,7 @@ Resume of the deep learning approach:
 2. Read the audios as melspectrograms, spliting then into 1.5s windows with 50% overlaping resulting in a dataset with shape (samples x time x frequency x channels)
 3. Train the CNN and test on test set using a Majority Voting approach
 
-### Results
 
-To compare the result across multiple architectures, we have took two approaches for this problem: One using the classic approach of extracting features and then using a classifier. The second approach, wich is implemented on the src file here is a Deep Learning approach feeding a CNN with a melspectrogram.
-
-You can check in the nbs folder on how we extracted the features, but here are the current results on the test set:
-
-| Model | Acc |
-|-------|-----|
-| Decision Tree | 0.5160 |
-| Random Forest | 0.6760 |
-| ElasticNet | 0.6880 |
-| Logistic Regression | 0.7640 |
-| SVM (RBF) | 0.7880 |
-
-For the deep learning approach we have tested a simple custom architecture that can be found at the *nbs* folder. 
-
-| Model | Acc |
-|-------|-----|
-| **CNN 2D** | **0.832** |
-
-![alt text](./data/assets/losscnn2dgtzan.png "Loss and accuracy of the CNN model")
-![alt text](./data/assets/cmcnngtzan.png "Confusion Matrix of the CNN model")
 
 ### Dataset
 
@@ -65,10 +42,9 @@ To apply the model on a test file, you need to run:
 
 ```bash
 $ cd src/
-$ python app.py -t MODEL_TYPE -m ../models/PATH_TO_MODEL -s PATH_TO_SONG
+$ python app.py -t dl -m ../models/PATH_TO_MODEL -s PATH_TO_SONG
 ```
 
-Where MODEL_TYPE = [ml, dl] for classical machine learning approach and for a deep learning approach, respectively.
 
 Usage example:
 
