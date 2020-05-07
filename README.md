@@ -1,20 +1,7 @@
 ## Music Genre classification using Deep Learning
 
-### Overview
-
-All the approaches are on the **nbs** folder in the Jupyter notebooks. 
-
-Resume of the deep learning approach:
-
-1. Shuffle the input and split into train and test (70%/30%)
-2. Read the audios as melspectrograms, spliting then into 1.5s windows with 50% overlaping resulting in a dataset with shape (samples x time x frequency x channels)
-3. Train the CNN and test on test set using a Majority Voting approach
-
-
 
 ### Dataset
-
-And how to get the dataset?
 
 1. Download the GTZAN dataset [here](http://opihi.cs.uvic.ca/sound/genres.tar.gz)
 
